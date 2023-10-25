@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - ApplicationTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>ApplicationTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/baseball.html">baseball</a> &gt; ApplicationTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">1</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.646s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="게임종료_후_재시작()"></a>
+<h3 class="failures">게임종료_후_재시작()</h3>
+<span class="code">
+<pre>java.lang.IllegalStateException: Could not initialize plugin: interface org.mockito.plugins.MockMaker (alternate: null)
+	at org.mockito.internal.configuration.plugins.PluginLoader$1.invoke(PluginLoader.java:88)
+	at jdk.proxy3/jdk.proxy3.$Proxy15.createStaticMock(Unknown Source)
+	at org.mockito.internal.util.MockUtil.createStaticMock(MockUtil.java:147)
+	at org.mockito.internal.MockitoCore.mockStatic(MockitoCore.java:99)
+	at org.mockito.Mockito.mockStatic(Mockito.java:2169)
+	at org.mockito.Mockito.mockStatic(Mockito.java:2103)
+	at camp.nextstep.edu.missionutils.test.Assertions.lambda$assertRandomTest$4(Assertions.java:87)
+	at org.junit.jupiter.api.AssertTimeout.lambda$assertTimeoutPreemptively$2(AssertTimeout.java:102)
+	at org.junit.jupiter.api.AssertTimeout.lambda$assertTimeoutPreemptively$4(AssertTimeout.java:138)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.IllegalStateException: Failed to load interface org.mockito.plugins.MockMaker implementation declared in java.lang.CompoundEnumeration@3668c1d2
+	at org.mockito.internal.configuration.plugins.PluginInitializer.loadImpl(PluginInitializer.java:58)
+	at org.mockito.internal.configuration.plugins.PluginLoader.loadPlugin(PluginLoader.java:69)
+	at org.mockito.internal.configuration.plugins.PluginLoader.loadPlugin(PluginLoader.java:54)
+	at org.mockito.internal.configuration.plugins.PluginRegistry.&lt;init&gt;(PluginRegistry.java:29)
+	at org.mockito.internal.configuration.plugins.Plugins.&lt;clinit&gt;(Plugins.java:20)
+	at org.mockito.internal.util.MockUtil.&lt;clinit&gt;(MockUtil.java:28)
+	... 10 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.mockito.internal.configuration.plugins.PluginInitializer.loadImpl(PluginInitializer.java:53)
+	... 15 more
+Caused by: org.mockito.exceptions.base.MockitoInitializationException: 
+Could not initialize inline Byte Buddy mock maker.
+
+It appears as if your JDK does not supply a working agent attachment mechanism.
+Java               : 17
+JVM vendor name    : Eclipse Adoptium
+JVM vendor version : 17.0.5+8
+JVM name           : OpenJDK 64-Bit Server VM
+JVM version        : 17.0.5+8
+JVM info           : mixed mode
+OS name            : Windows 11
+OS version         : 10.0
+
+	at app//org.mockito.internal.creation.bytebuddy.InlineDelegateByteBuddyMockMaker.&lt;init&gt;(InlineDelegateByteBuddyMockMaker.java:246)
+	at app//org.mockito.internal.creation.bytebuddy.InlineByteBuddyMockMaker.&lt;init&gt;(InlineByteBuddyMockMaker.java:25)
+	... 21 more
+Caused by: java.lang.IllegalArgumentException
+	at java.instrument/sun.instrument.InstrumentationImpl.appendToClassLoaderSearch0(Native Method)
+	at java.instrument/sun.instrument.InstrumentationImpl.appendToBootstrapClassLoaderSearch(InstrumentationImpl.java:220)
+	at org.mockito.internal.creation.bytebuddy.InlineDelegateByteBuddyMockMaker.&lt;clinit&gt;(InlineDelegateByteBuddyMockMaker.java:161)
+	... 22 more
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="failures">게임종료_후_재시작()</td>
+<td class="failures">0.646s</td>
+<td class="failures">failed</td>
+</tr>
+</table>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.1.1</a> at 2023. 10. 25. 오후 8:24:39</p>
+</div>
+</div>
+</body>
+</html>
